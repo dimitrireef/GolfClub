@@ -1,0 +1,159 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlInscrivezVous"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond_golf_home" >
+
+    <LinearLayout
+        android:id="@+id/llRegistrationForm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:weightSum="100" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="23" >
+
+            <ImageView
+                android:id="@+id/imLoadImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="17dp"
+                android:src="@drawable/ic_launcher" />
+
+            <TextView
+                android:id="@+id/txJuska"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imLoadImage"
+                android:layout_centerHorizontal="true"
+                android:text="Cliquer sur l&apos;icone pour ajouter une photo"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="70"
+            android:gravity="top|center"
+            android:orientation="vertical"
+            android:weightSum="100" >
+
+            <EditText
+                android:id="@+id/edtPrenom"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="12"
+                android:background="@drawable/textbars_golface"
+                android:ems="10"
+                android:hint="Pseudo"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/button_bleu" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="12"
+                android:background="@drawable/textbars_golface"
+                android:ems="10"
+                android:hint="Adresse email"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/button_bleu" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/edtRecherche"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="12"
+                android:background="@drawable/textbars_golface"
+                android:ems="10"
+                android:hint="Mot de Passe"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/button_bleu" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/edtConfirmationMotDePasse"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="12"
+                android:background="@drawable/textbars_golface"
+                android:ems="10"
+                android:hint="Confirmation mot de passe "
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/button_bleu" />
+
+            <EditText
+                android:id="@+id/edtPays"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="12"
+                android:background="@drawable/textbars_golface"
+                android:ems="10"
+                android:hint="Pays"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/button_bleu" />
+
+            <EditText
+                android:id="@+id/edtCodePromotionnel"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="12"
+                android:background="@drawable/textbars_golface"
+                android:ems="10"
+                android:hint="Code promotionnel"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/button_bleu" />
+
+            <LinearLayout
+                android:id="@+id/llRegistrationForm"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="20"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="100" >
+
+                <Button
+                    android:id="@+id/btRecherche"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="60"
+                    android:background="@drawable/connectezvous_bt"
+                    android:text="Inscrivez-vous"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

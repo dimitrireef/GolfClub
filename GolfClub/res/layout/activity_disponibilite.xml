@@ -1,0 +1,263 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/llheader"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/header_golface"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <Button
+            android:id="@+id/imBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/back"
+            android:clickable="true" />
+
+        <TextView
+            android:id="@+id/txFicheJoueur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.310"
+            android:gravity="center"
+            android:text="@string/se_mettre_disponibilite"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <!--
+    <golf.club.app.utils.VerticalPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llheader"
+        android:background="@drawable/fond_golf_home" >
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llheader"
+        android:background="@drawable/fond_golf_home"
+        android:orientation="vertical"
+        android:weightSum="100" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="18"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txDateEvement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/a_partir_de"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rlDOB"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="@drawable/textbars_golface"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Pseudo"
+                android:inputType="textPersonName"
+                android:textColor="@color/button_bleu"
+                android:textColorHint="@color/gray"
+                android:textSize="15sp"
+                android:textStyle="bold" >
+
+                <RelativeLayout
+                    android:id="@+id/relDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/txNombreMessage"
+                    android:background="@color/transparent"
+                    android:ems="10"
+                    android:hint="Pseudo"
+                    android:inputType="textPersonName"
+                    android:padding="5dp"
+                    android:textColor="@color/button_bleu"
+                    android:textColorHint="@color/gray"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/imgDate"
+                    android:background="@color/transparent"
+                    android:ems="10"
+                    android:gravity="left|center"
+                    android:hint="mm/dd/yyyy"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/button_bleu"
+                    android:textColorHint="@color/button_bleu"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgDate"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/cross"
+                    android:text="Button"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txJuska"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/juska"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rlDOB"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="@drawable/textbars_golface"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Pseudo"
+                android:inputType="textPersonName"
+                android:textColor="@color/button_bleu"
+                android:textColorHint="@color/gray"
+                android:textSize="15sp"
+                android:textStyle="bold" >
+
+                <RelativeLayout
+                    android:id="@+id/relDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/txNombreMessage"
+                    android:background="@color/transparent"
+                    android:ems="10"
+                    android:hint="Pseudo"
+                    android:inputType="textPersonName"
+                    android:padding="5dp"
+                    android:textColor="@color/button_bleu"
+                    android:textColorHint="@color/button_bleu"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btJusquaDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/imgJusquaDate"
+                    android:background="@color/transparent"
+                    android:ems="10"
+                    android:gravity="left|center"
+                    android:hint="mm/dd/yyyy"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/button_bleu"
+                    android:textColorHint="@color/button_bleu"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgJusquaDate"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/cross"
+                    android:text="Button"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="28"
+            android:background="@drawable/textbars_golface"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btSuccess"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/connectezvous_bt"
+                android:text="@string/edit_compte_sauveguarde"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btAnnuler"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/connectezvous_bt"
+                android:text="@string/annuler"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- </golf.club.app.utils.VerticalPager> -->
+
+    <RelativeLayout
+        android:id="@+id/ryChargementEnCours"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:visibility="gone" >
+
+        <include layout="@layout/chargement_en_cours" />
+    </RelativeLayout>
+
+</RelativeLayout>

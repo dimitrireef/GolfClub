@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Spash" >
+
+    <RelativeLayout
+        android:id="@+id/rySplashScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fond_golf_home"
+        android:visibility="visible" >
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llHomeConnexion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fond_golf_home"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:weightSum="100" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:gravity="bottom|center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txJuska"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GolfAce"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textSize="26sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="41"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homelogo_golface" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4.3" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom|center"
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:weightSum="100" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="50"
+                android:gravity="bottom|center"
+                android:text="Bienvenue!"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="50"
+                android:gravity="top|center"
+                android:orientation="horizontal"
+                android:weightSum="100" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="50"
+                    android:background="@color/white"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="34.5"
+            android:orientation="vertical"
+            android:weightSum="100" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="35"
+                android:gravity="center|top"
+                android:orientation="horizontal"
+                android:weightSum="100" >
+
+                <Button
+                    android:id="@+id/btConnexion"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="60"
+                    android:background="@drawable/connectezvous_bt"
+                    android:text="Connexion"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="35"
+                android:gravity="center|top"
+                android:orientation="horizontal"
+                android:weightSum="100" >
+
+                <Button
+                    android:id="@+id/btNouveauJoueur"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="60"
+                    android:background="@drawable/connectezvous_bt"
+                    android:text="Nouveau Joueur"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

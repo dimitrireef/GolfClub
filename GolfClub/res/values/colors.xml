@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparent">#00FFFFFF</color>
+    <color name="left_background">#1B252F</color>
+    <color name="white">#FFFFFF</color>
+    <color name="divider_color">#A2B5CD</color>
+    <color name="black">#000000</color>
+    <color name="gray">#808080</color>
+    <color name="gray_hexa">#a8a8a8</color>
+    <color name="royalBlue">#4169e1</color>
+    <color name="plainBlue">#ff000000</color>
+    <color name="darkBlue">#ff000000</color>
+    <color name="blacki">#50000000</color>
+    <color name="tabDark">#000000</color>
+    <color name="gray_center">#60848484</color>
+    <color name="gray_end">#99848484</color>
+    <color name="application_blue">#044796</color>
+    <color name="application_yellow">#FED023</color>
+    <color name="toast_top">#034596</color>
+    <color name="toast_center">#034596</color>
+    <color name="toast_bottom">#034596</color>
+    <color name="transparent_white">#99FFFFFF</color>
+    <color name="button_bleu">#3192E4</color>
+    <color name="cloud">#1EA6D8</color>
+    <color name="toast_gray">#50666666</color>
+    <color name="blubutton">#007AFF</color>
+    <color name="colorgreen">#8CA021</color>
+    <color name="red">#e50000</color>
+    <color name="gray_text">#EDEDED</color>
+    <color name="shire">#A40017</color>
+    <color name="gray_transparent">#50808080</color>
+    <color name="red_fade">#3192E4</color>
+        <color name="rede_fade">#DE868F</color>
+        <color name="bleu_fade">#45A5F6</color>
+    <color name="gray_light">#ededed</color>
+        <color name="fade_blue">#55007AFF</color>
+    
+</resources>

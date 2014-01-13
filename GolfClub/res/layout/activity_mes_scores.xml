@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond_golf_home" >
+
+    <LinearLayout
+        android:id="@+id/llheader"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/header_golface"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <Button
+            android:id="@+id/imBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/back"
+            android:clickable="true" />
+
+        <TextView
+            android:id="@+id/txFicheJoueur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.210"
+            android:gravity="center"
+            android:text="@string/mes_scores"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llheader"
+        android:divider="@drawable/line"
+        android:dividerHeight="1dp"
+        android:scrollbarThumbVertical="@color/transparent"
+        android:scrollingCache="false" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/rlChargementEnCours"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:visibility="gone" >
+
+        <include layout="@layout/chargement_en_cours" />
+    </RelativeLayout>
+
+</RelativeLayout>

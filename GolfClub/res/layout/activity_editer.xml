@@ -1,0 +1,697 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:nudorm="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond_golf_home"
+    tools:context=".Editer" >
+
+    <LinearLayout
+        android:id="@+id/llheader"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/header_golface"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <Button
+            android:id="@+id/imBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back"
+            android:clickable="true" />
+
+        <TextView
+            android:id="@+id/txFicheJoueur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imBack"
+            android:layout_weight="0.210"
+            android:gravity="center"
+            android:text="@string/editer_compte_title"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/llheader"
+        android:orientation="vertical"
+        android:weightSum="100" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7" >
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp" >
+
+            <ImageView
+                android:id="@+id/imgShowGalleryCam"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_weight="12.0"
+                android:scaleType="fitXY"
+                android:src="@drawable/default_avatar" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5" >
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/button_bleu"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/txPseudo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/hint_enregistrement_prenom"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txPseudoError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/hint_enregistrement_prenom"
+                android:textColor="@color/darkBlue"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPrenomInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPrenom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:background="@drawable/textbars_golface"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Pseudo"
+            android:inputType="textPersonName"
+            android:textColor="@color/button_bleu"
+            android:textColorHint="@color/gray"
+            android:textSize="15sp"
+            android:textStyle="bold" >
+
+            <RelativeLayout
+                android:id="@+id/rlPrenom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/btCross"
+                android:background="@color/transparent"
+                android:ems="10"
+                android:hint="Pseudo"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textColor="@color/button_bleu"
+                android:textColorHint="@color/gray"
+                android:textSize="15sp"
+                android:textStyle="bold" >
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/edtPrenom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/btCross"
+                android:background="@color/transparent"
+                android:ems="10"
+                android:hint="@string/prenom"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textColor="@color/button_bleu"
+                android:textColorHint="@color/gray"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btCross"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/cross"
+                android:text="Button"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llLayoutTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/button_bleu"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/txNomFamilleUserInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/hint_text_nom_de_famille"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txNomFamilleUserInfoError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/hint_enregistrement_prenom"
+                android:textColor="@color/darkBlue"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/ryResultatNet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:background="@drawable/textbars_golface"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Pseudo"
+            android:inputType="textPersonName"
+            android:textColor="@color/button_bleu"
+            android:textColorHint="@color/gray"
+            android:textSize="15sp"
+            android:textStyle="bold" >
+
+            <RelativeLayout
+                android:id="@+id/ryResultatNet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/imPar"
+                android:background="@color/transparent"
+                android:ems="10"
+                android:hint="Pseudo"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textColor="@color/button_bleu"
+                android:textColorHint="@color/gray"
+                android:textSize="15sp"
+                android:textStyle="bold" >
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/btPar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/imPar"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:ems="10"
+                android:hint="@string/nom_de_famille"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textColor="@color/button_bleu"
+                android:textColorHint="@color/gray"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imPar"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/cross"
+                android:text="Button"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDOB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/button_bleu"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/txDateNaissance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/hint_text_nom_de_famille"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txNonDivulge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/hint_enregistrement_prenom"
+                android:textColor="@color/darkBlue"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlDOB"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:background="@drawable/textbars_golface"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Pseudo"
+            android:inputType="textPersonName"
+            android:textColor="@color/button_bleu"
+            android:textColorHint="@color/gray"
+            android:textSize="15sp"
+            android:textStyle="bold" >
+
+            <RelativeLayout
+                android:id="@+id/relDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/txNombreMessage"
+                android:background="@color/transparent"
+                android:ems="10"
+                android:hint="Pseudo"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textColor="@color/button_bleu"
+                android:textColorHint="@color/gray"
+                android:textSize="15sp"
+                android:textStyle="bold" >
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/txNombreMessage"
+                android:background="@color/transparent"
+                android:ems="10"
+                android:gravity="left|center"
+                android:hint="@string/date_de_naissance"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textColor="@color/button_bleu"
+                android:textColorHint="@color/gray"
+                android:textSize="14sp"
+                android:textStyle="bold" >
+            </Button>
+
+            <ImageView
+                android:id="@+id/imgDate"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/cross"
+                android:text="Button"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llLayoutThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/button_bleu"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/txEmailInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/hint_text_adresse_email"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txEmailInfoError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/hint_enregistrement_prenom"
+                android:textColor="@color/darkBlue"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlRechercheUnPays"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:background="@drawable/textbars_golface"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Pseudo"
+            android:inputType="textPersonName"
+            android:textColor="@color/button_bleu"
+            android:textColorHint="@color/gray"
+            android:textSize="15sp"
+            android:textStyle="bold" >
+
+            <RelativeLayout
+                android:id="@+id/rlRechercheUnPays"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/btRechercheUnPays"
+                android:background="@color/transparent"
+                android:ems="10"
+                android:hint="Pseudo"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textColor="@color/button_bleu"
+                android:textColorHint="@color/gray"
+                android:textSize="15sp"
+                android:textStyle="bold" >
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/edtRechercheUnPays"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/btRechercheUnPays"
+                android:background="@color/transparent"
+                android:ems="10"
+                android:hint="@string/adresse_email"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textColor="@color/button_bleu"
+                android:textColorHint="@color/gray"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btRechercheUnPays"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/cross"
+                android:text="Button"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llLayoutFive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/button_bleu"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/txHandicapInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/hint_text_adresse_email"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txHandicapInfoError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/hint_enregistrement_prenom"
+                android:textColor="@color/darkBlue"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlHandicap"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:background="@drawable/textbars_golface"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Pseudo"
+            android:inputType="textPersonName"
+            android:textColor="@color/button_bleu"
+            android:textColorHint="@color/gray"
+            android:textSize="15sp"
+            android:textStyle="bold" >
+
+            <RelativeLayout
+                android:id="@+id/rlHandicap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/btHandicap"
+                android:background="@color/transparent"
+                android:ems="10"
+                android:hint="Pseudo"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textColor="@color/button_bleu"
+                android:textColorHint="@color/gray"
+                android:textSize="15sp"
+                android:textStyle="bold" >
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/edtHandicap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/btHandicap"
+                android:background="@color/transparent"
+                android:ems="10"
+                android:hint="@string/handicap"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textColor="@color/button_bleu"
+                android:textColorHint="@color/gray"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btHandicap"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/cross"
+                android:text="Button"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llLayoutFour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/button_bleu"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/txEmailInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/hint_enregistrement_prenom"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txEmailInfoError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/hint_enregistrement_prenom"
+                android:textColor="@color/darkBlue"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout03"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:background="@drawable/textbars_golface"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Pseudo"
+            android:inputType="textPersonName"
+            android:textColor="@color/button_bleu"
+            android:textColorHint="@color/gray"
+            android:textSize="15sp"
+            android:textStyle="bold" >
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout03"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/btPays"
+                android:background="@color/transparent"
+                android:ems="10"
+                android:hint="Pseudo"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textColor="@color/button_bleu"
+                android:textColorHint="@color/gray"
+                android:textSize="15sp"
+                android:textStyle="bold" >
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/edtPays"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/btPays"
+                android:background="@color/transparent"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="@string/pays"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textColor="@color/button_bleu"
+                android:textColorHint="@color/gray"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btPays"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/cross"
+                android:text="Button"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5" >
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="12"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <Button
+                android:id="@+id/btMesMessages"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="95"
+                android:background="@drawable/connectezvous_bt"
+                android:text="@string/edit_compte_sauveguarde"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

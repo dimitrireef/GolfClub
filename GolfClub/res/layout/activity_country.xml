@@ -1,0 +1,170 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond_golf_home" >
+
+    <LinearLayout
+        android:id="@+id/llheader"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/header_golface"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="100" >
+
+        <Button
+            android:id="@+id/imBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back"
+            android:clickable="true" />
+
+        <TextView
+            android:id="@+id/txFicheJoueur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imBack"
+            android:layout_weight="0.27"
+            android:gravity="center"
+            android:text="@string/editer_compte_pays"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llContainerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llheader"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:weightSum="100" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llRechercheInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@color/button_bleu"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/txEmailAdresseLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/adresse_electronique"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txNonDivulge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/darkBlue"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlRechercheUnPays"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:background="@drawable/textbars_golface"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Pseudo"
+            android:inputType="textPersonName"
+            android:textColor="@color/button_bleu"
+            android:textColorHint="@color/gray"
+            android:textSize="15sp"
+            android:textStyle="bold" >
+
+            <RelativeLayout
+                android:id="@+id/rlRechercheUnPays"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/btRechercheUnPays"
+                android:background="@color/transparent"
+                android:ems="10"
+                android:hint="Pseudo"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textColor="@color/button_bleu"
+                android:textColorHint="@color/gray"
+                android:textSize="15sp"
+                android:textStyle="bold" >
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/edtRechercheUnPays"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/btRechercheUnPays"
+                android:background="@color/transparent"
+                android:ems="10"
+                android:hint="@string/hint_recherche_un_pays"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textColor="@color/button_bleu"
+                android:textColorHint="@color/gray"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btRechercheUnPays"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/cross"
+                android:text="Button"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2" >
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/mlist"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="80"
+            android:divider="@color/transparent"
+            android:dividerHeight="0dp"
+            android:scrollbarThumbVertical="@color/transparent"
+            android:visibility="gone" >
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

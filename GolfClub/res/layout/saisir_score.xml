@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond_golf_home"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="31.5"
+        android:gravity="center_horizontal|bottom"
+        android:orientation="vertical"
+        android:weightSum="100" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="60"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/txJuska"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:text="NOM DU GOLF"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:orientation="vertical"
+        android:weightSum="100" >
+
+        <RelativeLayout
+            android:id="@+id/ryResultatNet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30"
+            android:background="@drawable/textbars_golface"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Pseudo"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textColorHint="@color/button_bleu"
+            android:textSize="15sp"
+            android:textStyle="bold" >
+
+            <RelativeLayout
+                android:id="@+id/ryResultatNet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/imPar"
+                android:background="@color/transparent"
+                android:ems="10"
+                android:hint="Pseudo"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/button_bleu"
+                android:textSize="15sp"
+                android:textStyle="bold" >
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/btPar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/imPar"
+                android:background="@color/transparent"
+                android:ems="10"
+                android:hint="Valeur brute"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/button_bleu"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imPar"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/cross"
+                android:text="Button"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPrenom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="30"
+            android:background="@drawable/textbars_golface"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Pseudo"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textColorHint="@color/button_bleu"
+            android:textSize="15sp"
+            android:textStyle="bold" >
+
+            <RelativeLayout
+                android:id="@+id/rlPrenom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/btCross"
+                android:background="@color/transparent"
+                android:ems="10"
+                android:hint="Pseudo"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/button_bleu"
+                android:textSize="15sp"
+                android:textStyle="bold" >
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/edtPrenom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/btCross"
+                android:background="@color/transparent"
+                android:ems="10"
+                android:hint="Valeur nette"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/button_bleu"
+                android:textSize="15sp"
+                android:textStyle="bold" >
+
+                <requestFocus />
+            </EditText>
+
+            <ImageView
+                android:id="@+id/btCross"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/cross"
+                android:text="Button"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <Button
+                android:id="@+id/btRepondre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="80"
+                android:background="@drawable/connectezvous_bt"
+                android:text="Button" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="27"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

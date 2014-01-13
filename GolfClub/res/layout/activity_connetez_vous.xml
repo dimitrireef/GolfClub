@@ -1,0 +1,238 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlConnectezVous"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond_golf_home" >
+
+    <LinearLayout
+        android:id="@+id/llheader"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/header_golface"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <Button
+            android:id="@+id/imBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:id="@+id/txJuska"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imBack"
+            android:layout_weight="0.27"
+            android:gravity="center"
+            android:text="Connexion"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llRegistrationForm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llheader"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:weightSum="100" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="28" >
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="40"
+            android:gravity="top|center"
+            android:orientation="vertical"
+            android:weightSum="100" >
+
+            <LinearLayout
+                android:id="@+id/llLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bubble"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/txPseudo"
+                   
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/saisir_pseudo"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlPseudo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="30"
+                android:background="@drawable/textbars_golface"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/button_bleu"
+                android:textSize="12sp" >
+
+                <EditText
+                    android:id="@+id/edtPseudo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/btPseudo"
+                    android:background="@color/transparent"
+                    android:ems="10"
+                   
+                    android:hint="@string/pseudo_mail"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:textColorHint="@color/button_bleu"
+                    android:textSize="15sp" >
+                </EditText>
+
+                <ImageView
+                    android:id="@+id/btPseudo"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/cross"
+                    android:text="Button"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llLayoutTwoConnexion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bubble"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/txMDPInfo"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/adresse_electronique_vs"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlMotDePasse"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="30"
+                android:background="@drawable/textbars_golface"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textColorHint="@color/button_bleu" >
+
+                <EditText
+                    android:id="@+id/edtRecherche"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/btPass"
+                    android:background="@color/transparent"
+                    android:ems="10"
+                    android:hint="@string/mot_de_passe"
+                    android:inputType="textPassword"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:password="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/button_bleu"
+                    android:textSize="15sp" >
+                </EditText>
+
+                <ImageView
+                    android:id="@+id/btPass"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/cross"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:text="Button"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llRegistrationForm"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="40"
+                android:gravity="top|center"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:weightSum="100" >
+
+                <Button
+                    android:id="@+id/btRecherche"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="60"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_corner"
+                    android:text="Connectez-vous"
+                    android:textColor="@color/white" />
+
+                <!-- @color/button_bleu -->
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="33" >
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCharge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <include layout="@layout/chargement_en_cours" />
+    </RelativeLayout>
+
+</RelativeLayout>
